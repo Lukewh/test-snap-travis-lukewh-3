@@ -1,0 +1,18 @@
+name: test-snap-travis-lukewh-3
+version: 0.0.2
+summary: Just a test python snap
+description: >
+  Just a test python snap innit
+
+confinement: strict
+base: core18
+
+parts:
+  test-snap-lukewh-3:
+    plugin: python
+    python-version: python3
+    source: .
+
+apps:
+  test-snap-lukewh-3:
+    command: python3 test_snap.py
